@@ -1,26 +1,155 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+    --background: var(--gray1);
+    --foreground: var(--gray12);
+    /* Gray */
+    --gray-1: hsl(0 0% 99%);
+    --gray-2: hsl(0 0% 97.3%);
+    --gray-3: hsl(0 0% 95.1%);
+    --gray-4: hsl(0 0% 93%);
+    --gray-5: hsl(0 0% 90.9%);
+    --gray-6: hsl(0 0% 88.7%);
+    --gray-7: hsl(0 0% 85.8%);
+    --gray-8: hsl(0 0% 78%);
+    --gray-9: hsl(0 0% 56.1%);
+    --gray-10: hsl(0 0% 52.3%);
+    --gray-11: hsl(0 0% 43.5%);
+    --gray-12: hsl(0 0% 9%);
+    /* Gray Alpha */
+    --gray-a1: hsla(0, 0%, 0%, 0.012);
+    --gray-a2: hsla(0, 0%, 0%, 0.027);
+    --gray-a3: hsla(0, 0%, 0%, 0.047);
+    --gray-a4: hsla(0, 0%, 0%, 0.071);
+    --gray-a5: hsla(0, 0%, 0%, 0.09);
+    --gray-a6: hsla(0, 0%, 0%, 0.114);
+    --gray-a7: hsla(0, 0%, 0%, 0.141);
+    --gray-a8: hsla(0, 0%, 0%, 0.22);
+    --gray-a9: hsla(0, 0%, 0%, 0.439);
+    --gray-a10: hsla(0, 0%, 0%, 0.478);
+    --gray-a11: hsla(0, 0%, 0%, 0.565);
+    --gray-a12: hsla(0, 0%, 0%, 0.91);
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+    --color-background: var(--background);
+    --color-foreground: var(--foreground);
+    --font-sans: var(--font-inter);
+    --font-mono: var(--font-ibm-mono);
+    /* Font size */
+    --text-10: 0.625rem;
+    --text-12: 0.75rem;
+    --text-13: 0.8125rem;
+    --text-14: 0.875rem;
+    --text-15: 0.9375rem;
+    --text-16: 1rem;
+    --text-18: 1.125rem;
+    --text-20: 1.25rem;
+    --text-24: 1.5rem;
+    --text-32: 2rem;
+    --text-40: 2.5rem;
+    --text-48: 3rem;
+    --text-56: 3.5rem;
+    --text-64: 4rem;
+    /* Font weight */
+    --font-weight-400: 400;
+    --font-weight-500: 500;
+    --font-weight-600: 600;
+    --font-weight-700: 700;
+    --font-weight-800: 800;
+    /* Line height */
+    --leading-12: 0.75rem;
+    --leading-16: 1rem;
+    --leading-20: 1.25rem;
+    --leading-24: 1.5rem;
+    --leading-28: 1.75rem;
+    --leading-32: 2rem;
+    --leading-40: 2.5rem;
+    --leading-48: 3rem;
+    --leading-56: 3.5rem;
+    /* Radius */
+    --radius-2: 2px;
+    --radius-4: 4px;
+    --radius-6: 6px;
+    --radius-8: 8px;
+    --radius-12: 12px;
+    --radius-16: 16px;
+    --radius-24: 24px;
+    --radius-32: 32px;
+    --radius-full: 9999px;
+    /* Shadows */
+    --shadow-border-color: #0000000d;
+    --shadow-medium: 0px 2px 2px #0000000a, 0px 8px 8px -8px #0000000a;
+    --shadow-border: 0 0 0 1px var(--shadow-border-color);
+    --shadow-small: 0px 2px 2px #0000000a;
+    --shadow-large: 0px 2px 2px #0000000a, 0px 8px 16px -4px #0000000a;
+    --color-orange: #ff4d00;
+    --color-red: #ff2b43;
+    --color-yellow: #ffd335;
+    --color-blue: #0070f3;
+    --color-green: #00ce7c;
+    --color-purple: #bc85ff;
+    /* Gray */
+    --color-gray-1: hsl(0 0% 99%);
+    --color-gray-2: hsl(0 0% 97.3%);
+    --color-gray-3: hsl(0 0% 95.1%);
+    --color-gray-4: hsl(0 0% 93%);
+    --color-gray-5: hsl(0 0% 90.9%);
+    --color-gray-6: hsl(0 0% 88.7%);
+    --color-gray-7: hsl(0 0% 85.8%);
+    --color-gray-8: hsl(0 0% 78%);
+    --color-gray-9: hsl(0 0% 56.1%);
+    --color-gray-10: hsl(0 0% 52.3%);
+    --color-gray-11: hsl(0 0% 43.5%);
+    --color-gray-12: hsl(0 0% 9%);
+    /* Gray Alpha */
+    --color-gray-a1: hsla(0, 0%, 0%, 0.012);
+    --color-gray-a2: hsla(0, 0%, 0%, 0.027);
+    --color-gray-a3: hsla(0, 0%, 0%, 0.047);
+    --color-gray-a4: hsla(0, 0%, 0%, 0.071);
+    --color-gray-a5: hsla(0, 0%, 0%, 0.09);
+    --color-gray-a6: hsla(0, 0%, 0%, 0.114);
+    --color-gray-a7: hsla(0, 0%, 0%, 0.141);
+    --color-gray-a8: hsla(0, 0%, 0%, 0.22);
+    --color-gray-a9: hsla(0, 0%, 0%, 0.439);
+    --color-gray-a10: hsla(0, 0%, 0%, 0.478);
+    --color-gray-a11: hsla(0, 0%, 0%, 0.565);
+    --color-gray-a12: hsla(0, 0%, 0%, 0.91);
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+    :root {
+        --background: var(--gray-1);
+        --foreground: var(--gray-12);
+        /* Gray */
+        --gray-1: hsl(0 0% 8.5%);
+        --gray-2: hsl(0 0% 11%);
+        --gray-3: hsl(0 0% 13.6%);
+        --gray-4: hsl(0 0% 15.8%);
+        --gray-5: hsl(0 0% 17.9%);
+        --gray-6: hsl(0 0% 20.5%);
+        --gray-7: hsl(0 0% 24.3%);
+        --gray-8: hsl(0 0% 31.2%);
+        --gray-9: hsl(0 0% 43.9%);
+        --gray-10: hsl(0 0% 49.4%);
+        --gray-11: hsl(0 0% 62.8%);
+        --gray-12: hsl(0 0% 93%);
+        /* Gray Alpha */
+        --gray-a1: hsla(0, 0%, 100%, 0);
+        --gray-a2: hsla(0, 0%, 100%, 0.026);
+        --gray-a3: hsla(0, 0%, 100%, 0.056);
+        --gray-a4: hsla(0, 0%, 100%, 0.077);
+        --gray-a5: hsla(0, 0%, 100%, 0.103);
+        --gray-a6: hsla(0, 0%, 100%, 0.129);
+        --gray-a7: hsla(0, 0%, 100%, 0.172);
+        --gray-a8: hsla(0, 0%, 100%, 0.249);
+        --gray-a9: hsla(0, 0%, 100%, 0.386);
+        --gray-a10: hsla(0, 0%, 100%, 0.446);
+        --gray-a11: hsla(0, 0%, 100%, 0.592);
+        --gray-a12: hsla(0, 0%, 100%, 0.923);
+    }
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+    @apply bg-background text-foreground font-sans;
 }
