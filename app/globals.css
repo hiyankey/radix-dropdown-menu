@@ -82,11 +82,11 @@
     --radius-32: 32px;
     --radius-full: 9999px;
     /* Shadows */
-    --shadow-border-color: #0000000d;
-    --shadow-medium: 0px 2px 2px #0000000a, 0px 8px 8px -8px #0000000a;
+    --shadow-border-color: var(--gray-6);
+    --shadow-medium: 0px 2px 2px var(--gray-4), 0px 8px 8px -8px var(--gray-4);
     --shadow-border: 0 0 0 1px var(--shadow-border-color);
-    --shadow-small: 0px 2px 2px #0000000a;
-    --shadow-large: 0px 2px 2px #0000000a, 0px 8px 16px -4px #0000000a;
+    --shadow-small: 0px 2px 2px var(--gray-4);
+    --shadow-large: 0px 2px 2px var(--gray-4), 0px 8px 16px -4px var(--gray-4);
     --color-orange: #ff4d00;
     --color-red: #ff2b43;
     --color-yellow: #ffd335;
