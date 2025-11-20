@@ -51,17 +51,18 @@ export default function Home() {
           </button>
         </Trigger>
         <Content
-          className="min-w-55 rounded-6 bg-gray-3 p-1 text-14 shadow-border will-change-[opacity,transform] data-[side=bottom]:animate-slideUpAndFade data-[side=left]:animate-slideRightAndFade data-[side=right]:animate-slideLeftAndFade data-[side=top]:animate-slideDownAndFade"
+          className="relative min-w-55 rounded-6 bg-gray-3 p-1 text-14 shadow-border will-change-[opacity,transform] data-[side=bottom]:animate-slideUpAndFade data-[side=left]:animate-slideRightAndFade data-[side=right]:animate-slideLeftAndFade data-[side=top]:animate-slideDownAndFade"
           sideOffset={5}
         >
           <Item className="flex h-6 items-center rounded-4 px-2 pl-4 outline-none data-highlighted:bg-orange dark:data-highlighted:bg-gray-a3">
-            New Tab <div className="ml-auto pl-5">⌘+T</div>
+            New Tab <div className="ml-auto pl-5 font-mono text-12">⌘+T</div>
           </Item>
           <Item className="flex h-6 items-center rounded-4 px-2 pl-4 outline-none data-highlighted:bg-orange dark:data-highlighted:bg-gray-a3">
-            New Window <div className="ml-auto pl-5">⇧+⌘+N</div>
+            New Window{" "}
+            <div className="ml-auto pl-5 font-mono text-12">⇧+⌘+N</div>
           </Item>
           <Item
-            className="flex h-6 items-center rounded-4 px-2 pl-4 outline-none data-highlighted:bg-orange dark:data-highlighted:bg-gray-a3"
+            className="flex h-6 items-center rounded-4 px-2 pl-4 outline-none data-highlighted:bg-orange data-disabled:text-gray-11 dark:data-highlighted:bg-gray-a3"
             disabled
           >
             New Private Window
@@ -78,7 +79,8 @@ export default function Home() {
               sideOffset={5}
             >
               <Item className="group relative flex h-6 select-none items-center rounded-[3px] pr-2 pl-6 text-violet11 leading-none outline-none data-highlighted:bg-orange dark:data-highlighted:bg-gray-a3">
-                Save Page As… <div className="ml-auto pl-5">⌘+S</div>
+                Save Page As…{" "}
+                <div className="ml-auto pl-5 font-mono text-12">⌘+S</div>
               </Item>
               <Item className="relative flex h-6 select-none items-center rounded-[3px] pr-2 pl-6 pl-6text-violet11 leading-none outline-none data-highlighted:bg-orange dark:data-highlighted:bg-gray-a3">
                 Create Shortcut…
@@ -95,29 +97,30 @@ export default function Home() {
           <Separator className="m-1 h-px bg-gray-6" />
           <CheckboxItem
             checked={isBookmarkChecked}
-            className="flex h-6 items-center rounded-4 px-2 pl-4 outline-none data-highlighted:bg-orange dark:data-highlighted:bg-gray-a3"
+            className="relative flex h-6 items-center rounded-4 px-2 pl-4 outline-none data-highlighted:bg-orange dark:data-highlighted:bg-gray-a3"
             onCheckedChange={setIsBookmarkChecked}
           >
             <ItemIndicator className="absolute left-0 inline-flex w-4 items-center justify-center">
               <CheckIcon />
             </ItemIndicator>
-            Show Bookmarks <div className="ml-auto pl-5">⌘+B</div>
+            Show Bookmarks{" "}
+            <div className="ml-auto pl-5 font-mono text-12">⌘+B</div>
           </CheckboxItem>
           <CheckboxItem
             checked={urlsChecked}
-            className="flex h-6 items-center rounded-4 px-2 pl-4 outline-none data-highlighted:bg-orange dark:data-highlighted:bg-gray-a3"
+            className="relative flex h-6 items-center rounded-4 px-2 pl-4 outline-none data-highlighted:bg-orange dark:data-highlighted:bg-gray-a3"
             onCheckedChange={setUrlsChecked}
           >
             <ItemIndicator className="absolute left-0 inline-flex w-4 items-center justify-center">
               <CheckIcon />
             </ItemIndicator>
-            Show Full URLs<div className="ml-auto pl-5">⇧+⌘+N</div>
+            Show Full URLs
           </CheckboxItem>
           <Separator className="m-1 h-px bg-gray-6" />
           <Label className="pl-4 text-12">People</Label>
           <RadioGroup onValueChange={setPerson} value={person}>
             <RadioItem
-              className="flex h-6 items-center rounded-4 px-2 pl-4 outline-none data-highlighted:bg-orange dark:data-highlighted:bg-gray-a3"
+              className="relative flex h-6 items-center rounded-4 px-2 pl-4 outline-none data-highlighted:bg-orange dark:data-highlighted:bg-gray-a3"
               value="pedro"
             >
               <ItemIndicator className="absolute left-0 inline-flex w-4 items-center justify-center">
@@ -126,7 +129,7 @@ export default function Home() {
               Pedro
             </RadioItem>
             <RadioItem
-              className="flex h-6 items-center rounded-4 px-2 pl-4 outline-none data-highlighted:bg-orange dark:data-highlighted:bg-gray-a3"
+              className="relative flex h-6 items-center rounded-4 px-2 pl-4 outline-none data-highlighted:bg-orange dark:data-highlighted:bg-gray-a3"
               value="colm"
             >
               <ItemIndicator className="absolute left-0 inline-flex w-4 items-center justify-center">
@@ -135,7 +138,7 @@ export default function Home() {
               Colm
             </RadioItem>
           </RadioGroup>
-          <Arrow className="fill-gray-3" />
+          <Arrow className="fill-gray-3 stroke-2 stroke-gray-6" />
         </Content>
       </Root>
     </div>
