@@ -119,6 +119,61 @@
     --color-gray-a10: var(--gray-a10);
     --color-gray-a11: var(--gray-a11);
     --color-gray-a12: var(--gray-a12);
+
+    --animate-slideLeftAndFade: slideLeftAndFade 300ms ease-out;
+    --animate-slideRightAndFade: slideRightAndFade 300ms ease-out;
+    --animate-slideUpAndFade: slideUpAndFade 300ms ease-out;
+    --animate-slideDownAndFade: slideDownAndFade 300ms ease-out;
+
+    @keyframes slideLeftAndFade {
+        from {
+            opacity: 0;
+            transform: translateX(-2px)
+        }
+
+        to {
+            opacity: 1;
+            transform: translateX(0px)
+        }
+    }
+
+    @keyframes slideRightAndFade {
+        from {
+            opacity: 0;
+            transform: translateX(2px)
+        }
+
+        to {
+            opacity: 1;
+            transform: translateX(0px)
+        }
+    }
+
+    @keyframes slideUpAndFade {
+        from {
+            opacity: 0;
+            transform: translateY(2px)
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0px)
+        }
+    }
+
+    @keyframes slideDownAndFade {
+        from {
+            opacity: 0;
+            transform: translateY(-2px)
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0px)
+        }
+    }
+
+
 }
 
 .dark {
